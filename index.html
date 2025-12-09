@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <title>Koishem</title>
+</head>
+<body>
+    <button class="menu-toggle">☰</button>
+    <div class="sidebar">
+        <div class="avatar"></div>
+        <div class="explorer-title" data-translate="explorer_explorer"></div>
+      
+        <div class="file-explorer">
+            <div class="file" data-target="main" data-translate="explorer_file_main">main.md</div>
+            <div class="folder" data-translate="explorer_folder_projects"></div>
+            <div class="file indent" data-target="balls">balls.md</div>
+            <div class="file indent" data-target="project1">project1.js</div>
+        </div>
+      
+        <div class="sidebar-buttons">
+            <button onclick="setLang('ua')">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" alt="UA" class="flag">
+            </button>
+            <button onclick="setLang('ru')">
+              <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg" alt="RU" class="flag">
+            </button>
+            <button onclick="setLang('en')">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1024px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="UK" class="flag">
+            </button>
+          </div>
+    </div>
+
+    <div class="content">
+        <div id="main">
+          <h1 data-translate="content_main_welcome">Welcome!</h1>
+          <br>
+          <hr>
+          <br>
+        </div>
+      
+        <div id="balls">
+          <h1>BALLS!</h1>
+          <p>Это твой гибкий бенто-портфолио. Здесь можно редактировать контент прямо в HTML.</p>
+        </div>
+      
+        <div id="project1">
+          <h1>Project 1</h1>
+          <p>Описание первого проекта.</p>
+          <img src="https://via.placeholder.com/300" alt="Project 1">
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+    <script>
+        setLang('en');
+    </script>
+</body>
+</html>
