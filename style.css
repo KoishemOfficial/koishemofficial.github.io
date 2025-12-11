@@ -1,60 +1,353 @@
-* {box-sizing: border-box; margin:0; padding:0; font-family: 'Fira Code', Consolas, 'Courier New', monospace; scroll-behavior: smooth;}
-body {background: #1a1a1a; color: #fff; height: 100vh; display: flex;}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color: #e0e0e0;
+}
 
-.sidebar {min-width: 180px; max-width: 220px; background: #0f0f0f; border-right: 1px solid #333; display: flex; flex-direction: column; padding: 20px;}
+body {
+    background: #1a1a1a;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+}
 
-.sidebar-buttons {display: flex; justify-content: center; margin-top: auto; gap: 8px;}
-.sidebar-buttons button {flex-wrap: wrap; margin-top: 5px; padding: 5px; background: transparent; border: none; cursor: pointer; transition: transform 0.2s ease; display: flex; align-items: center; justify-content: center;}
+.sidebar {
+    z-index: 999;
+    font-family: 'Fira Code', Consolas, 'Courier New', monospace;
+    min-width: 180px;
+    max-width: 220px;
+    background: #0f0f0f;
+    border-right: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
 
-.flag {width: 32px; height: 32px; object-fit: cover; vertical-align: middle; transition: transform 0.2s ease;}
+.sidebar-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    gap: 8px;
+}
 
-.explorer-title {font-weight: bold; margin: 8px 0; font-size: 90%; letter-spacing: 1px; opacity: 0.8; text-transform: uppercase;}
+.sidebar-buttons button {
+    flex-wrap: wrap;
+    margin-top: 5px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.file-explorer {flex: 1; color: white; overflow-y: auto; flex-direction: column;}
-.file, .folder {padding: 4px 10px; font-size: 75%; border-radius: 4px; display: flex; align-items: center; gap: 6px; cursor: pointer; letter-spacing: 1px; transition: 0.2s;}
-.file:hover, .file.active {background: #333;}
-.folder {text-transform: uppercase;}
+.sidebar-buttons button:hover {
+    transform: scale(1.2);
+}
 
-.file-explorer::-webkit-scrollbar {width: 8px;}
-.file-explorer::-webkit-scrollbar-track {background: #0f0f0f;}
-.file-explorer::-webkit-scrollbar-thumb {background: #555; border-radius: 4px;}
-.file-explorer::-webkit-scrollbar-thumb:hover {background: #777;}
+.toc-sidebar {
+    z-index: 999;
+    font-family: 'Fira Code', Consolas, 'Courier New', monospace;
+    width: 200px;
+    background: #111;
+    border-left: 1px solid #333;
+    padding: 15px;
+    overflow-y: auto;
+    font-size: 14px;
+}
 
-.folder {font-weight: bold; display: flex; align-items: center; gap: 4px; opacity: 0.8;}
+.toc-sidebar h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
 
-.indent {margin-left: 16px;}
-.icon {width: 14px; text-align: center;}
+.toc-item {
+    margin-bottom: 6px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s;
+    font-size: 13px;
+}
 
-.content {flex: 1; padding: 20px; overflow-y: auto;}
-.content > div {display: none;}
-.content > div.active {display: block;}
+.toc-item:hover {
+    opacity: 1;
+    transform: translateX(4px);
+}
 
-.content img {max-width: 100%; border-radius: 8px; margin-bottom: 16px;}
-.content video {max-width: 100%; border-radius: 8px; margin-bottom: 16px;}
+.footer {
+    font-family: 'Inter', sans-serif;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: #0f0f0f;
+    color: #888;
+    font-size: 14px;
+    border-top: 1px solid #333;
+    z-index: 998;
+}
 
-.content h1 {font-size: clamp(18px, 4vw, 36px);}
-.content h2 {font-size: clamp(16px, 3.5vw, 30px);}
-.content h3 {font-size: clamp(14px, 3vw, 24px);}
-.content h4 {font-size: clamp(12px, 2.5vw, 20px);}
-.content p  {font-size: clamp(10px, 2vw, 16px);}
+.flag {
+    width: 42px;
+    height: 32px;
+    object-fit: cover;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
 
-.content hr {background-color: #6c6c6c; height: 1px; border: none;}
+.explorer-title {
+    font-weight: bold;
+    margin: 8px 0;
+    font-size: 90%;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
 
-.avatar {aspect-ratio: 1 / 1; width: 100%; height: 25%; border-radius: 16px; background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #fff; background-image: url(./content/Koishem_avatar_old_eyebrows.png)}
+.file-explorer {
+    flex: 1;
+    overflow-y: auto;
+    flex-direction: column;
+}
 
-.menu-toggle {display: none; position: fixed; top: 10px; right: 10px; z-index: 1000; background: #333; color: #fff; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer;}
+.file,
+.folder {
+    padding: 4px 10px;
+    font-size: 75%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
 
-.sidebar-buttons button:hover {transform: scale(1.2);}
+.file:hover,
+.file.active {
+    background: #333;
+}
+
+.folder {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.8;
+}
+
+.indent {
+    margin-left: 16px;
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0f0f0f;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.content > div {
+    display: none;
+}
+
+.content > div.active {
+    display: block;
+}
+
+.content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.content video {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.content h1 {
+    font-size: clamp(18px, 4vw, 36px);
+}
+
+.content h2 {
+    font-size: clamp(16px, 3.5vw, 30px);
+}
+
+.content h3 {
+    font-size: clamp(14px, 3vw, 24px);
+}
+
+.content h4 {
+    font-size: clamp(12px, 2.5vw, 20px);
+}
+
+.content p {
+    font-size: clamp(10px, 2vw, 16px);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content hr {
+    background-color: #6c6c6c;
+    height: 1px;
+    border: none;
+}
+
+.content button {
+    position: relative;
+    display: inline-block;
+    height: 44px;
+    padding: 0 12px 0 45px;
+    margin-right: 5px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    font-family: inherit;
+    font-size: clamp(12px, 1.2vw, 16px);
+    border: 1px solid #444;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 36px;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.content button img {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2em;
+    height: 2em;
+    object-fit: contain;
+}
+
+.content button span {
+    display: inline-block;
+    color: #e0e0e0;
+}
+
+.content button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.content .gallery_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: cover;
+}
+
+.content .gallery_post {
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    -webkit-user-drag: none;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    pointer-events: none;
+}
+
+.content .gallery_header {
+    width: cover;
+    text-align: center;
+}
+
+.avatar {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 25%;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-image: url(./content/Koishem_avatar_old_eyebrows.png);
+}
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 @media (max-width: 768px) {
-    .menu-toggle{display: block;}
+    .menu-toggle {
+        display: block;
+    }
 
-    .sidebar {position: fixed; top: 0; right: -100%; height: 100%; width: 220px; transition: right 0.3s ease; z-index: 999;}
+    .toc-sidebar {
+        display: none;
+    }
 
-    .sidebar.active {right: 0;}
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 220px;
+        transition: right 0.3s ease;
+        z-index: 999;
+    }
 
-    body {flex-direction: column;}
+    .sidebar.active {
+        right: 0;
+    }
 
-    .content {padding: 10px}
+    body {
+        flex-direction: column;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content button{
+        margin-top: 12px;
+    }
+
+    .content p {
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
 }
-  

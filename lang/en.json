@@ -1,6 +1,34 @@
 {
+  "sections_title": "Sections",
   "explorer_explorer": "▼ explorer",
-  "explorer_folder_projects": "▼ projects",
+  "explorer_folder_blockbench": "▼ blockbench",
+  "explorer_folder_mapdev": "▼ mapdev",
   "explorer_file_main": "main.md",
-  "content_main_welcome": "👋 Welcome to my website!"
+  "explorer_file_blockbench": "gallery.md",
+
+  "content_main_welcome": "👋 Welcome to my website!",
+  "content_main_line1": "Hey! I'm Koishem.",
+  "content_main_line2": "Programming is my hobby, and Minecraft is my main creative environment.",
+  "content_main_line3": "I got into minecraft map development in late 2022~. Datapacks, resource packs, and precompilers (MCBeet, my beloved) are my main tools. Basically I like using minecraft as a game engine.",
+  "content_main_line4": "I also do 3D and 2D design using Blockbench, creating models, textures, and many other assets for my projects.",
+  "content_main_line5": "One of my biggest achievements is a node-based algorithm builder created inside of Minecraft, inspired by Scratch — all without mods!",
+  "content_main_line6": "I've started learning Python on my first coding course back in 2020. Since then I switched multiple courses, learning basics for C++, C#, Webdev, various Node Programming Languages, UI design, Game design and much more.",
+  "content_main_line7": "I'm currently exploring new projects and slowly expanding my skills in backend and frontend programming, design, and game development.",
+
+  "content_main_header1":"Minecraft Map Development",
+  "content_main_header2":"Coding Journey",
+  "content_main_header3":"My Links",
+
+  "content_main_button1": "My Blockbench Gallery",
+  "content_main_button2": "My Minecrat Inside",
+  "content_main_button3": "My Planet Minecraft",
+  "content_main_button4": "My Itch.io",
+  "content_main_button5": "My Github",
+  "content_main_button6": "Youtube",
+  "content_main_button7": "TikTok",
+  "content_main_button8": "Twitter",
+  "content_main_button9": "Instagram",
+  "content_main_button10": "Bluesky",
+
+  "content_gallery_welcome": "🎨 My Blockbench Gallery"
 }

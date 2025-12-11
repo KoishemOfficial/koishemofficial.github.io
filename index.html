@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="icon" href="content/Koishem_avatar_old_eyebrows.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Koishem</title>
 </head>
 <body>
@@ -16,9 +17,9 @@
       
         <div class="file-explorer">
             <div class="file" data-target="main" data-translate="explorer_file_main">main.md</div>
-            <div class="folder" data-translate="explorer_folder_projects"></div>
-            <div class="file indent" data-target="balls">balls.md</div>
-            <div class="file indent" data-target="project1">project1.js</div>
+            <div class="folder" data-translate="explorer_folder_blockbench"></div>
+            <div class="file indent" data-target="gallery" data-translate="explorer_file_blockbench">gallery.md</div>
+            <div class="folder" data-translate="explorer_folder_mapdev"></div>
         </div>
       
         <div class="sidebar-buttons">
@@ -36,23 +37,135 @@
 
     <div class="content">
         <div id="main">
-          <h1 data-translate="content_main_welcome">Welcome!</h1>
+          <h1 data-translate="content_main_welcome"></h1>
           <br>
           <hr>
           <br>
+          <p data-translate="content_main_line1"></p>
+          <br>
+          <p data-translate="content_main_line2"></p>
+          <br>
+          <h2 data-translate="content_main_header1"></h2>
+          <br>
+          <p data-translate="content_main_line3"></p>
+          <br>
+          <p data-translate="content_main_line4"></p>
+          <br>
+          <a href="https://minecraft-inside.ru/user/Koishem/" target="_blank" ref="noreferrer"><button><img src="content/icons/inside.png" alt="icon"><span data-translate="content_main_button2"></span></button></a>
+          <a href="https://www.planetminecraft.com/member/koishem/" target="_blank" ref="noreferrer"><button><img src="content/icons/planet.png" alt="icon"><span data-translate="content_main_button3"></span></button></a>
+          <a href="https://koishem.itch.io" target="_blank" ref="noreferrer"><button><img src="content/icons/itch-io.png" alt="icon"><span data-translate="content_main_button4"></span></button></a>
+          <button onclick="switchFile('gallery')"><img src="content/icons/blockbench.png" alt="icon"><span data-translate="content_main_button1"></span></button>
+          <br>
+          <br>
+          <p data-translate="content_main_line5"></p>
+          <br>
+          <h2 data-translate="content_main_header2"></h2>
+          <br>
+          <p data-translate="content_main_line6"></p>
+          <br>
+          <p data-translate="content_main_line7"></p>
+          <br>
+          <a href="https://github.com/KoishemOfficial" target="_blank" ref="noreferrer"><button><img src="content/icons/github.png" alt="icon"><span data-translate="content_main_button5"></span></button></a>
+          <br>
+          <br>
+          <h2 data-translate="content_main_header3"></h2>
+          <br>
+          <a href="https://www.youtube.com/@KoishemOfficial" target="_blank" ref="noreferrer"><button><img src="content/icons/youtube.webp" alt="icon"><span data-translate="content_main_button6"></span></button></a>
+          <a href="https://www.tiktok.com/@koishem.official" target="_blank" ref="noreferrer"><button><img src="content/icons/tiktok.png" alt="icon"><span data-translate="content_main_button7"></span></button></a>
+          <a href="https://x.com/koishem" target="_blank" ref="noreferrer"><button><img src="content/icons/x.png" alt="icon"><span data-translate="content_main_button8"></span></button></a>
+          <a href="https://www.instagram.com/koishemofficial" target="_blank" ref="noreferrer"><button><img src="content/icons/Instagram.webp" alt="icon"><span data-translate="content_main_button9"></span></button></a>
+          <a href="https://bsky.app/profile/koishem.bsky.social" target="_blank" ref="noreferrer"><button><img src="content/icons/bluesky.png" alt="icon"><span data-translate="content_main_button10"></span></button></a>
+          <br>
+          <br>
+          <br>
         </div>
-      
-        <div id="balls">
-          <h1>BALLS!</h1>
-          <p>Это твой гибкий бенто-портфолио. Здесь можно редактировать контент прямо в HTML.</p>
-        </div>
-      
-        <div id="project1">
-          <h1>Project 1</h1>
-          <p>Описание первого проекта.</p>
-          <img src="https://via.placeholder.com/300" alt="Project 1">
+        <div id="gallery">
+            <h1 data-translate="content_gallery_welcome"></h1>
+            <br>
+            <hr>
+            <br>
+            <h3 class="gallery_header">"Deceased"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/deceased_1.png">
+              <img class="gallery_post" src="content/gallery/deceased_2.png">
+              <img class="gallery_post" src="content/gallery/deceased_3.gif">
+            </div>
+            <h3 class="gallery_header">"Big Spider"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/Spider_1.png">
+              <img class="gallery_post" src="content/gallery/Spider_2.png">
+              <img class="gallery_post" src="content/gallery/Spider_3.gif">
+            </div>
+            <h3 class="gallery_header">"Centipede"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/Centipede_1.png">
+              <img class="gallery_post" src="content/gallery/Centipede_2.png">
+              <img class="gallery_post" src="content/gallery/Centipede_3.gif">
+            </div>
+            <h3 class="gallery_header">"Mouse"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/mouse_1.png">
+              <img class="gallery_post" src="content/gallery/mouse_2.png">
+              <img class="gallery_post" src="content/gallery/mouse_3.gif">
+            </div>
+            <h3 class="gallery_header">"Wagon"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/wagon_1.png">
+              <img class="gallery_post" src="content/gallery/wagon_3.gif">
+            </div>
+            <h3 class="gallery_header">"Pistol"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/Pistol_1.png">
+              <img class="gallery_post" src="content/gallery/Pistol_2.png">
+              <img class="gallery_post" src="content/gallery/Pistol_3.gif">
+            </div>
+            <h3 class="gallery_header">"Crawler"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/crawler_1.png">
+              <img class="gallery_post" src="content/gallery/crawler_2.png">
+              <img class="gallery_post" src="content/gallery/crawler_3.gif">
+            </div>
+            <h3 class="gallery_header">"Generator"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/Generator_1.png">
+              <img class="gallery_post" src="content/gallery/Generator_2.png">
+              <img class="gallery_post" src="content/gallery/Generator_3.gif">
+            </div>
+            <h3 class="gallery_header">"Fan"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/fan_1.png">
+              <img class="gallery_post" src="content/gallery/fan_3.gif">
+            </div>
+            <h3 class="gallery_header">"Minecart"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/minecart_1.png">
+              <img class="gallery_post" src="content/gallery/minecart_3.gif">
+            </div>
+            <h3 class="gallery_header">"Bench"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/bench_1.png">
+              <img class="gallery_post" src="content/gallery/bench_3.gif">
+            </div>
+            <h3 class="gallery_header">"Bendy"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/bendy_1.png">
+              <img class="gallery_post" src="content/gallery/bendy_2.png">
+            </div>
+            <h3 class="gallery_header">"Trophy"</h3>
+            <div class="gallery_container">
+              <img class="gallery_post" src="content/gallery/award_1.png">
+              <img class="gallery_post" src="content/gallery/award_2.png">
+              <img class="gallery_post" src="content/gallery/award_3.png">
+              <img class="gallery_post" src="content/gallery/award_4.png">
+              <img class="gallery_post" src="content/gallery/award_5.png">
+            </div>
         </div>
       </div>
+      <div class="footer">© 2025 Koishem Official. All rights reserved.</div>
+      <div class="toc-sidebar">
+            <h3 data-translate="sections_title"></h3>
+            <div class="toc-items"></div>
+        </div>
 
     <script src="script.js"></script>
     <script>
