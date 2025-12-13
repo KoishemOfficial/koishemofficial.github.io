@@ -29,12 +29,13 @@
         <div class="explorer-title" data-translate="explorer_explorer"></div>
       
         <div class="file-explorer">
-            <div class="file indent1" data-target="main" data-translate="explorer_file_main">main.md</div>
+            <div class="file" data-target="main" data-translate="explorer_file_main">main.md</div>
             <div class="folder" data-translate="explorer_folder_blockbench"></div>
             <div class="file indent1" data-target="gallery" data-translate="explorer_file_blockbench">gallery.md</div>
             <div class="folder" data-translate="explorer_folder_mapdev"></div>
             <div class="file indent1" data-target="my_studio" data-translate="explorer_file_my_studio">my_studio.md</div>
-            <div class="folder" data-translate="explorer_folder_projects"></div>
+            <div class="folder" data-translate="explorer_folder_meta"></div>
+            <div class="file indent1" data-target="contacts" data-translate="explorer_file_contacts">contacts.md</div>
         </div>
       
         <div class="sidebar-buttons">
@@ -47,7 +48,7 @@
             <button onclick="setLang('en')">
               <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/1024px-Flag_of_the_United_Kingdom_%283-5%29.svg.png" alt="UK" class="flag">
             </button>
-          </div>
+        </div>
     </div>
 
     <div class="content">
@@ -66,10 +67,10 @@
           <br>
           <p data-translate="content_main_line4"></p>
           <br>
-          <a href="https://minecraft-inside.ru/user/Koishem/" target="_blank" ref="noreferrer"><button><img src="content/icons/inside.png" alt="icon"><span data-translate="content_main_button2"></span></button></a>
-          <a href="https://www.planetminecraft.com/member/koishem/" target="_blank" ref="noreferrer"><button><img src="content/icons/planet.png" alt="icon"><span data-translate="content_main_button3"></span></button></a>
-          <a href="https://koishem.itch.io" target="_blank" ref="noreferrer"><button><img src="content/icons/itch-io.png" alt="icon"><span data-translate="content_main_button4"></span></button></a>
-          <button onclick="switchFile('gallery')"><img src="content/icons/blockbench.png" alt="icon"><span data-translate="content_main_button1"></span></button>
+          <a href="https://minecraft-inside.ru/user/Koishem/" target="_blank" ref="noreferrer"><button><img src="content/icons/inside.png" alt="icon"><span data-translate="content_main_button_minecraft_inside"></span></button></a>
+          <a href="https://www.planetminecraft.com/member/koishem/" target="_blank" ref="noreferrer"><button><img src="content/icons/planet.png" alt="icon"><span data-translate="content_main_button_planet_minecraft"></span></button></a>
+          <a href="https://koishem.itch.io" target="_blank" ref="noreferrer"><button><img src="content/icons/itch-io.png" alt="icon"><span data-translate="content_main_button_itch"></span></button></a>
+          <button onclick="switchFile('gallery')"><img src="content/icons/blockbench.png" alt="icon"><span data-translate="content_main_button_blockbench_gallery"></span></button>
           <br>
           <br>
           <p data-translate="content_main_line5"></p>
@@ -80,16 +81,16 @@
           <br>
           <p data-translate="content_main_line7"></p>
           <br>
-          <a href="https://github.com/KoishemOfficial" target="_blank" ref="noreferrer"><button><img src="content/icons/github.png" alt="icon"><span data-translate="content_main_button5"></span></button></a>
+          <a href="https://github.com/KoishemOfficial" target="_blank" ref="noreferrer"><button><img src="content/icons/github.png" alt="icon"><span data-translate="content_main_button_github"></span></button></a>
           <br>
           <br>
           <h2 data-translate="content_main_header3"></h2>
           <br>
-          <a href="https://www.youtube.com/@KoishemOfficial" target="_blank" ref="noreferrer"><button><img src="content/icons/youtube.webp" alt="icon"><span data-translate="content_main_button6"></span></button></a>
-          <a href="https://www.tiktok.com/@koishem.official" target="_blank" ref="noreferrer"><button><img src="content/icons/tiktok.png" alt="icon"><span data-translate="content_main_button7"></span></button></a>
-          <a href="https://x.com/koishem" target="_blank" ref="noreferrer"><button><img src="content/icons/x.png" alt="icon"><span data-translate="content_main_button8"></span></button></a>
-          <a href="https://www.instagram.com/koishemofficial" target="_blank" ref="noreferrer"><button><img src="content/icons/Instagram.webp" alt="icon"><span data-translate="content_main_button9"></span></button></a>
-          <a href="https://bsky.app/profile/koishem.bsky.social" target="_blank" ref="noreferrer"><button><img src="content/icons/bluesky.png" alt="icon"><span data-translate="content_main_button10"></span></button></a>
+          <a href="https://www.youtube.com/@KoishemOfficial" target="_blank" ref="noreferrer"><button><img src="content/icons/youtube.webp" alt="icon"><span data-translate="content_main_button_youtube"></span></button></a>
+          <a href="https://www.tiktok.com/@koishem.official" target="_blank" ref="noreferrer"><button><img src="content/icons/tiktok.png" alt="icon"><span data-translate="content_main_button_tiktok"></span></button></a>
+          <a href="https://x.com/koishem" target="_blank" ref="noreferrer"><button><img src="content/icons/x.png" alt="icon"><span data-translate="content_main_button_twitter"></span></button></a>
+          <a href="https://www.instagram.com/koishemofficial" target="_blank" ref="noreferrer"><button><img src="content/icons/Instagram.webp" alt="icon"><span data-translate="content_main_button_instagram"></span></button></a>
+          <a href="https://bsky.app/profile/koishem.bsky.social" target="_blank" ref="noreferrer"><button><img src="content/icons/bluesky.png" alt="icon"><span data-translate="content_main_button_bluesky"></span></button></a>
           <br>
           <br>
           <br>
@@ -179,6 +180,49 @@
               <img class="gallery_post" src="content/gallery/tkm1_destroyer.png">
               <img class="gallery_post" src="content/gallery/tkm1_shock.png">
             </div>
+        </div>
+        <div id="my_studio">
+          <h1 data-translate="content_my_studio_header1"></h1>
+          <br>
+          <hr>
+          <br>
+          <p data-translate="content_my_studio_line1"></p>
+          <br>
+          <p data-translate="content_my_studio_line2"></p>
+          <br>
+          <ul>
+            <li class="indent2"><p data-translate="content_my_studio_list_item1"></p></li>
+            <li class="indent2"><p data-translate="content_my_studio_list_item2"></p></li>
+            <li class="indent2"><p data-translate="content_my_studio_list_item3"></p></li>
+            <li class="indent2"><p data-translate="content_my_studio_list_item4"></p></li>
+          </ul>
+          <br>
+          <p data-translate="content_my_studio_line3"></p>
+          <br>
+          <a href="https://minecraft-inside.ru/user/Koishem/" target="_blank" ref="noreferrer"><button><img src="content/icons/inside.png" alt="icon"><span data-translate="content_main_button_minecraft_inside"></span></button></a>
+          <a href="https://www.planetminecraft.com/member/koishem/" target="_blank" ref="noreferrer"><button><img src="content/icons/planet.png" alt="icon"><span data-translate="content_main_button_planet_minecraft"></span></button></a>
+          <a href="https://koishem.itch.io" target="_blank" ref="noreferrer"><button><img src="content/icons/itch-io.png" alt="icon"><span data-translate="content_main_button_itch"></span></button></a>
+          <br>
+          <br>
+          <a href="https://www.youtube.com/@KoishemOfficial" target="_blank" ref="noreferrer"><button><img src="content/icons/youtube.webp" alt="icon"><span data-translate="content_main_button_youtube"></span></button></a>
+          <a href="https://www.tiktok.com/@koishem.official" target="_blank" ref="noreferrer"><button><img src="content/icons/tiktok.png" alt="icon"><span data-translate="content_main_button_tiktok"></span></button></a>
+          <a href="https://x.com/koishem" target="_blank" ref="noreferrer"><button><img src="content/icons/x.png" alt="icon"><span data-translate="content_main_button_twitter"></span></button></a>
+          <a href="https://www.instagram.com/koishemofficial" target="_blank" ref="noreferrer"><button><img src="content/icons/Instagram.webp" alt="icon"><span data-translate="content_main_button_instagram"></span></button></a>
+          <a href="https://bsky.app/profile/koishem.bsky.social" target="_blank" ref="noreferrer"><button><img src="content/icons/bluesky.png" alt="icon"><span data-translate="content_main_button_bluesky"></span></button></a>
+          <br>
+        </div>
+        <div id="contacts">
+          <h1 data-translate="content_contacts_header1"></h1>
+          <br>
+          <hr>
+          <br>
+          <br>
+          <h3>Email: <a href="mailto:koishem.personal@gmail.com" target="_blank" ref="noreferrer"><span class="contacts-link">koishem.personal@gmail.com</span></a></h3>
+          <br>
+          <h3>Discord: <a href="https://discord.com/users/621619092394213376" target="_blank" ref="noreferrer"><span class="contacts-link">Koishem</span></a></h3>
+          <br>
+          <h3>Telegram: <a href="https://t.me/KoishemOff" target="_blank" ref="noreferrer"><span class="contacts-link">@KoishemOff</span></a></h3>
+          <br>
         </div>
       </div>
       <div class="footer">© 2025 Koishem Official. All rights reserved.</div>

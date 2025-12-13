@@ -152,7 +152,7 @@ body {
     opacity: 0.8;
 }
 
-.indent11 {
+.indent1 {
     margin-left: 16px;
 }
 
@@ -241,8 +241,9 @@ body {
     display: inline-block;
     height: 44px;
     padding: 0 12px 0 45px;
+    margin-top: 5px;
     margin-right: 5px;
-    background-color: #1f1f1f;
+    background-color: #262626;
     color: #e0e0e0;
     font-family: inherit;
     font-size: clamp(12px, 1.2vw, 16px);
@@ -300,6 +301,15 @@ body {
     text-align: center;
 }
 
+.content a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content a:visited {
+    color: inherit;
+}
+
 .avatar {
     aspect-ratio: 1 / 1;
     width: 100%;
@@ -324,6 +334,11 @@ body {
     padding: 8px 12px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.contacts-link {
+    color: #ffd000;
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
