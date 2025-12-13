@@ -233,7 +233,8 @@
 
     <script src="script.js"></script>
     <script>
-        setLang('en');
+        const savedLang = localStorage.getItem("lang") || "en";
+        setLang(savedLang, false);
     </script>
 </body>
 </html>

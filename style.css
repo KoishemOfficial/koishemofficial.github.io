@@ -11,6 +11,14 @@ body {
     color: #fff;
     height: 100vh;
     display: flex;
+    overflow-y: hidden;
+
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 .sidebar {
@@ -93,6 +101,19 @@ body {
     font-size: 14px;
     border-top: 1px solid #333;
     z-index: 998;
+}
+
+.sidebar,
+.toc-sidebar,
+.footer {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+body.loaded .sidebar,
+body.loaded .toc-sidebar,
+body.loaded .footer {
+    opacity: 1;
 }
 
 .flag {
@@ -186,14 +207,34 @@ body {
     padding: 20px;
     overflow-y: auto;
     font-family: 'Inter', sans-serif;
+    transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .content > div {
     display: none;
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .content > div.active {
     display: block;
+    animation: contentFade 0.35s ease forwards;
+}
+
+.content.fading {
+    opacity: 0;
+    transform: translateY(4px);
+}
+
+@keyframes contentFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .content img {

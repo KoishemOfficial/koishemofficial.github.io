@@ -33,30 +33,55 @@ const files = document.querySelectorAll('.file');
     updateTOC();
 }
 
-  let currentLang = "en";
-  function setLang(lang) {
-    fetch(`lang/${lang}.json`)
-      .then(r => {
-        if (!r.ok) throw new Error('JSON not found.');
-        return r.json();
-      })
-      .then(data => {
-        document.querySelectorAll("[data-translate]").forEach(el => {
-          const key = el.getAttribute("data-translate");
-          el.textContent = data[key] || key;
-        });
-        currentLang = lang;
-        updateTOC();
-      })
-      .catch(err => console.error(err));
+let currentLang = null;
+let isSwitchingLang = false;
+
+function applyLang(data) {
+    document.querySelectorAll("[data-translate]").forEach(el => {
+        const key = el.getAttribute("data-translate");
+        el.textContent = data[key] || key;
+    });
+    updateTOC();
 }
 
-  const menuToggle = document.querySelector('.menu-toggle');
-  const sidebar = document.querySelector('.sidebar');
-  
-  menuToggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-  });
+function setLang(lang, animated = true) {
+    if (lang === currentLang || isSwitchingLang) return;
+
+    const content = document.querySelector(".content");
+
+    if (!animated) {
+        fetch(`lang/${lang}.json`)
+            .then(r => r.json())
+            .then(data => {
+                applyLang(data);
+                currentLang = lang;
+            });
+        return;
+    }
+
+    isSwitchingLang = true;
+    content.classList.add("fading");
+
+    setTimeout(() => {
+        fetch(`lang/${lang}.json`)
+            .then(r => r.json())
+            .then(data => {
+                applyLang(data);
+                currentLang = lang;
+                localStorage.setItem("lang", lang);
+
+                content.classList.remove("fading");
+                isSwitchingLang = false;
+            })
+            .catch(err => {
+                console.error(err);
+                content.classList.remove("fading");
+                isSwitchingLang = false;
+            });
+    }, 250);
+}
+
+
 
   function updateTOC() {
     const active = document.querySelector(".content > div.active");
@@ -89,3 +114,7 @@ const files = document.querySelectorAll('.file');
         items.appendChild(item);
     });
 }
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
